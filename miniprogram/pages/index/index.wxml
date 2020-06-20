@@ -1,0 +1,21 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="contain"> 
+  <van-notice-bar
+  text="{{gonggao}}"
+  >
+  </van-notice-bar>
+  <view class="pro-list">
+    <view wx:for="{{productsList}}" wx:key="index" class="pro-item">
+      <image src="{{item.imgList[0]}}"></image>
+      <view class="item-header">
+        <text class="item-name">{{item.productName}}</text>
+        <text>{{item.totalNum}}股</text>
+      </view>
+      <text class="item-intro">{{item.productIntro}}</text>
+      <view class="item-footer">
+        <text>￥{{item.productPrice}}/股</text>
+        <van-button color="rgb(241, 21, 21)" size="small" plain data-productname="{{item.productName}}" bindtap="jumpProduct">项目详情</van-button>
+      </view>
+    </view>
+  </view>
+</view>

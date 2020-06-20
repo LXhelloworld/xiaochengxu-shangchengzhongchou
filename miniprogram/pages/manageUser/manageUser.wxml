@@ -1,0 +1,23 @@
+<!--miniprogram/pages/manageUser/manageUser.wxml-->
+<view class="contain">
+ <view wx:for="{{userList}}" wx:key="index">
+  <van-card
+  tag="{{item.shenfen}}"
+  title="{{item.nickName}}"
+  thumb="{{ item.avatarUrl}}"
+  >
+  <view slot="tags" wx:if="{{item.smConfirm}}">
+    <text>已实名认证</text>
+  </view>
+   <view slot="tags" wx:else>
+    <text>未实名认证</text>
+  </view>
+  <view slot="footer">
+    <van-button  color="red" size="mini" data-id="{{item._id}}" bindtap="showSmDialog">通多实名认证</van-button>
+    <van-button color="red" size="mini" data-id="{{item._id}}" bindtap="showDialog">设为管理员</van-button>
+    <van-button color="red" size="mini" data-id="{{item._id}}" bindtap="showCancelDialog">取消管理员</van-button>
+  </view>
+  </van-card> 
+  <van-dialog id="van-dialog" />
+ </view>
+</view>

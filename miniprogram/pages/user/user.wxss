@@ -1,0 +1,78 @@
+/* miniprogram/pages/user/user.wxss *//* pages/user/user.wxss */
+.user-index{
+  background-color: rgb(236, 236, 236); 
+  width: 100%;
+  min-height: 100%;
+  padding-top: 5rpx;
+}
+.user-info{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  margin: 15rpx;
+  border-radius:22rpx;
+}
+.user-img{
+  margin: 10rpx;
+}
+.user-name{
+  margin-top: -35rpx;
+  margin-left: 35rpx;
+}
+.icon{
+  margin-left: 400rpx;
+}
+
+.order-state{
+  display: flex;
+  justify-content: space-around;
+  padding: 15rpx;
+  background-color: white;
+  border-radius: 22rpx;
+  margin:15rpx
+}
+.about-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+  border-radius: 22rpx;
+  margin:15rpx
+}
+.line{
+  width: 4rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  height: 30rpx;
+  background-color: #FF0000 ;
+  float: left;
+}
+.item{
+  margin-top: 20rpx;
+  width: 100%;
+}
+.item text{
+  float: left;
+}
+.icon1{
+  margin-left: 650rpx;
+  margin-top: 5rpx;
+}
+.kf{
+  width: 100%;
+  padding: 100rpx;
+}
+
+.kf button{
+  width: 50%;
+  margin-left: 100rpx;
+  background-color: red;
+  color: white;
+}
+.bindtap-class{
+  color: #FF0000;
+  font-size: 40rpx;
+}

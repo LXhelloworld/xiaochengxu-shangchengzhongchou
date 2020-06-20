@@ -1,0 +1,20 @@
+/* miniprogram/pages/smConfirm/smConfirm.wxss */
+.up-img{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.img-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 15px;
+  width: 700rpx;
+  height:400rpx;
+  margin: 15rpx;
+}
+.img-item image{
+  width: 80%;
+  height: 100%;
+  border-radius: 11rpx;
+}

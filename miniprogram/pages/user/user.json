@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-icon": "../../miniprogram_npm/@vant/weapp/icon/index",
+    "van-image": "../../miniprogram_npm/@vant/weapp/image/index"
+  },
+  "backgroundColor": "#F6F6F6",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FF0000",
+  "navigationBarTitleText": "个人主页",
+  "navigationBarTextStyle": "white"
+}

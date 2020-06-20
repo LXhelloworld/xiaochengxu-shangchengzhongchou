@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-button": "@vant/weapp/button/index"
+  },
+  "backgroundColor": "#F6F6F6",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FF0000",
+  "navigationBarTitleText": "xxxx公司",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,58 @@
+<!--miniprogram/pages/manageCompany/manageCompany.wxml-->
+<view>
+  <view>
+    <van-cell-group>
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入要改的公告"
+        border="{{ false }}"
+        label="公告"
+        bind:change="onChange"
+      >
+      <van-button slot="button" color="red" size="small" type="primary" bindtap="fb">确定发布</van-button>
+      </van-field>
+    </van-cell-group>
+  </view>
+  <view>
+    <van-cell-group>
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入公司介绍"
+        border="{{ false }}"
+        label="公司介绍"
+        bind:change="onChangeIntro"
+      >
+      <van-button slot="button" color="red" size="small" type="primary" bindtap="fbIntro">确定发布</van-button>
+      </van-field>
+    </van-cell-group>
+  </view>
+  <view>
+    <van-cell-group>
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入公司电话"
+        border="{{ false }}"
+        label="公司电话"
+        bind:change="onChangePhone"
+      >
+      <van-button slot="button" color="red" size="small" type="primary" bindtap="fbPhone">确定发布</van-button>
+      </van-field>
+    </van-cell-group>
+  </view>
+  <view>
+    <van-cell-group>
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入公司邮箱"
+        border="{{ false }}"
+        label="公司邮箱"
+        bind:change="onChangeEmial"
+      >
+      <van-button slot="button" color="red" size="small" type="primary" bindtap="fbEmail">确定发布</van-button>
+      </van-field>
+    </van-cell-group>
+  </view>
+  <van-cell title="项目管理" is-link bindtap="toEditProduct" />
+  <van-cell title="用户管理" is-link bindtap="toEditUser" />
+  <van-toast id="van-toast" />
+</view>

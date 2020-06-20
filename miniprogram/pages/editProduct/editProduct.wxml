@@ -1,0 +1,104 @@
+<!--miniprogram/pages/editProduct/editProduct.wxml-->
+<!--miniprogram/pages/addProduct/addProduct.wxml-->
+<view class="contain">
+  <van-cell-group>
+  <van-field
+    label="项目名称"
+    value="{{productName}}"
+    border="{{ false }}"
+    bind:blur="onChangeName"
+  />
+  </van-cell-group>
+  <van-cell-group>
+  <van-field
+    label="总股数"
+    value="{{ totalNum }}"
+    border="{{ false }}"
+    bind:blur="onChangeTotal"
+  />
+  </van-cell-group>
+  <van-cell-group>
+  <van-field
+    label="每人限购"
+    value="{{ num }}"
+    border="{{ false }}"
+    bind:blur="onChangeOnePeople"
+  />
+  </van-cell-group>
+  <van-cell-group>
+  <van-field
+    label="单股价格"
+    value="{{ productPrice }}"
+    border="{{ false }}"
+    bind:blur="onChangeOne"
+  />
+  </van-cell-group>
+  <van-cell-group>
+  <van-field
+    value="{{ productIntro }}"
+    label="项目介绍"
+    type="textarea"
+    autosize
+    border="{{ false }}"
+    bind:blur="onChangeIntro"
+  />
+  </van-cell-group>
+  <van-cell title="开始时间" is-link data-type="start" bind:click="showPopup" label="start:{{startTime}}" />
+   <van-cell title="结束时间" is-link data-type="end" bind:click="showPopup" label="end:{{endTime}}"/>
+  <van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+    <van-datetime-picker
+    type="date"
+    value="{{ currentDate }}"
+    bind:input="onInput"
+    min-date="{{ minDate }}"
+    max-date="{{maxDate}}"
+    formatter="{{ formatter }}"
+    bind:confirm="confirmDate"
+    bind:cancal="onClose"
+    />
+  </van-popup>
+  <view>
+    <van-cell title="项目计划书" is-link bindtap="upLoadPlanFile" />
+    <van-progress  color="#ee0a24" percentage="{{planProgress}}" />
+    <view wx:if="{{planUrl}}" class="plan-text">
+      <text>{{productName}}项目计划书</text>
+      <view>
+        <van-icon name="cross" color="red" size="18" bindtap="deletePlanFile"/>
+      </view>
+    </view>
+  </view>
+   <view>
+    <van-cell title="股权众筹计划" is-link bindtap="upLoadgqFile" />
+    <van-progress  color="#ee0a24" percentage="{{gqProgress}}" />
+    <view wx:if="{{gqUrl}}" class="plan-text">
+      <text>{{productName}}股权众筹计划</text>
+      <view>
+        <van-icon name="cross" color="red" size="18" bindtap="deleteGqFile"/>
+      </view>
+    </view>
+  </view>
+   <view>
+    <van-cell title="上传图片" is-link bindtap="upLoadImg" />
+    <van-progress  color="#ee0a24" percentage="{{imgProgress}}" />
+    <view class="up-img">
+      <view wx:for="{{imgList}}" wx:key="index" class="img-item">
+        <image src="{{item}}" ></image>
+        <view class="delete-icon">
+          <van-icon name="cross" size="24" color="red" data-item="{{item}}" bindtap="deleteImg" />
+        </view>
+      </view>
+    </view>
+  </view>
+   <view>
+    <van-cell title="上传视频" is-link bindtap="upLoadVideo" />
+    <van-progress  color="#ee0a24" percentage="{{videoProgress}}" />
+    <view wx:if="{{videoUrl}}" class="video">
+      <video src="{{videoUrl}}"></video>
+      <view class="delete-icon">
+        <van-icon name="cross" size="36" color="red" bindtap="deleteVideo" />
+      </view>
+    </view>
+  </view>
+  <van-button type="primary" block  class="sc-button" bindtap="upLoadProduct">确认修改</van-button>
+</view>
+

@@ -1,0 +1,52 @@
+<!--pages/user/user.wxml-->
+<view class="user-index">
+	<view class="user-info">
+		<view class="user-img">
+			<van-image round width="100rpx" height="100rpx" src="{{avatarUrl}}"></van-image>
+		</view>
+		<view class="user-name" bindtap="login">
+			<text>{{userName}}</text>
+		</view>
+		<view class="icon">
+			<van-icon name="arrow" color="red" />
+		</view>
+	</view>
+	<view class="order-state">
+		<view data-type="0" bindtap="jumpOrder">全部订单</view>
+		<view data-type="1" bindtap="jumpOrder">未支付</view>
+		<view data-type="2" bindtap="jumpOrder">待评论</view>
+	</view>
+	<view class="about-us">
+		<view class="item" bindtap="jumpMp" wx:if="{{showManage}}">
+			<view class="line"></view>
+			<text>公司管理</text>
+			<view class="icon1">
+				<van-icon name="arrow" color="red" />
+			</view>
+		</view>
+		<view class="item" bindtap="jumpConnection">
+			<view class="line"></view>
+			<text>联系我们</text>
+			<view class="icon1">
+				<van-icon name="arrow" color="red" />
+			</view>
+		</view>
+		<view class="item" bindtap="jumpCompanyIntro">
+			<view class="line"></view>
+			<text>公司详情</text>
+			<view class="icon1">
+				<van-icon name="arrow" color="red" />
+			</view>
+		</view>
+		<view class="item">
+			<view class="line"></view>
+			<text>批评建议</text>
+			<view class="icon1">
+				<van-icon name="arrow" color="red" />
+			</view>
+		</view>
+	</view>
+	<view class="kf">
+		<button bindtap="call">客服小姐姐</button>
+	</view>
+</view>

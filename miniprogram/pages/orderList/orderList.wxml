@@ -1,0 +1,20 @@
+<!--miniprogram/pages/orderList/orderList.wxml-->
+<view class="contain">
+ <view wx:for="{{productsList}}" wx:key="index">
+  <van-card
+  num="{{item.needNum}}"
+  price="{{item.productPrice*item.needNum}}"
+  desc="{{item.productIntro}}"
+  title="{{item.productName}}"
+  thumb="{{item.productImg}}"
+  >
+  <view slot="footer">
+    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="editProduct" wx:if="{{item.paid}}">评论</van-button>
+    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="toPay" wx:else>去支付</van-button>
+    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="showDialog">删除</van-button>
+  </view>
+  </van-card> 
+  <van-dialog id="van-dialog" />
+ </view>
+ <van-toast id="van-toast" />
+</view>

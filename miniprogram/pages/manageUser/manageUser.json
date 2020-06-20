@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-card": "@vant/weapp/card/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "backgroundColor": "#F6F6F6",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FF0000",
+  "navigationBarTitleText": "用户管理",
+  "navigationBarTextStyle": "white"
+}

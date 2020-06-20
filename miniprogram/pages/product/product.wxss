@@ -1,0 +1,100 @@
+/* miniprogram/pages/product/product.wxss */
+.contain{
+  background-color: rgb(236, 236, 236); 
+  width: 100%;
+  padding-bottom: 80px;
+}
+.video{
+  display: flex;
+  justify-content: center;
+}
+.mingcheng{
+  font-size: 25rpx;
+  color: rgb(163, 163, 163);
+  margin-left: 25rpx;
+  margin-right: 35rpx;
+}
+.qh{
+  font-size: 20rpx;
+  color: rgb(7, 7, 7);
+}
+.pro-message{
+  background-color: white;
+  padding: 15rpx;
+}
+.pro-header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+
+.pro-num{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+.pro-num-text{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.price-change{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+.minus{
+  height: 70%;
+  width:3.5%
+}
+.add{
+  height: 70%;
+  width:3.5%
+}
+.pro-intro{
+  background-color: white;
+  padding: 15rpx;
+}
+.pro-intro text{
+  font-size: 25rpx;
+  color: gray;
+  text-indent:50rpx;
+}
+.pro-plan{
+  background-color: white;
+}
+
+.fg{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15rpx;
+  margin-top: 15rpx;
+}
+.h-line-left{
+  height: 1rpx;
+  width: 180rpx;
+  background-image: linear-gradient(to right ,rgba(255, 255, 255, 0),rgb(116, 116, 116));
+}
+.h-line-right{
+  height: 1rpx;
+  width: 180rpx;
+  background-image: linear-gradient(to left ,rgba(255, 255, 255, 0),rgb(116, 116, 116));
+}
+.fg-text{
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.pro-img{
+  width: 100%;
+  background-color: white;
+}
+.image{
+  width: 100%;
+}
+.image image{
+  width: 100%;
+  margin:20rpx
+}

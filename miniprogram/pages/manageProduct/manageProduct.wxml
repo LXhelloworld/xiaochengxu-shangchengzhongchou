@@ -1,0 +1,20 @@
+<!--miniprogram/pages/manageProduct/manageProduct.wxml-->
+<view class="contain">
+ <view wx:for="{{productsList}}" wx:key="index">
+  <van-card
+  num="1"
+  price="{{item.productPrice}}"
+  desc="{{item.productIntro}}"
+  title="{{item.productName}}"
+  thumb="{{item.imgList[0]}}"
+  >
+  <view slot="footer">
+    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="editProduct">编辑</van-button>
+    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="showDialog">删除</van-button>
+  </view>
+  </van-card> 
+  <van-dialog id="van-dialog" />
+ </view>
+ <van-button  color="red" size="nomal"  bindtap="jumpAddProduct">添加项目</van-button>
+ <van-toast id="van-toast" />
+</view>

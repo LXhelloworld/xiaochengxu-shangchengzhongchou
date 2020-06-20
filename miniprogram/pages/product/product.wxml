@@ -1,0 +1,70 @@
+<!--miniprogram/pages/product/product.wxml-->
+<view class="contain">
+  <view class="video">
+    <video src="{{product[0].videoUrl}}">
+    </video>
+  </view>
+  <view class="pro-message">
+    <view>
+        <text class="mingcheng">名称</text>
+        <text>{{product[0].productName}}</text>
+    </view>
+    <view class="pro-header">
+      <view>
+        <text class="mingcheng">单价</text>
+        <text class="qh">￥</text>    
+        <text>{{product[0].productPrice}}</text>
+        <text class="qh">/股</text>
+      </view>
+      <text>{{product[0].totalNum}}股</text>   
+    </view> 
+    <view class="pro-num">
+      <view class="price-change">
+        <text class="mingcheng">预购</text>
+        <image class="minus" src="./../../images/jian.png" bindtap="minusNum"></image>
+        <text class="pro-num-text">{{needNum}}</text>
+        <image class="add" src="./../../images/jia.png" bindtap="addNum"></image>
+        <text class="qh">每人限购{{product[0].num}}股</text>
+      </view>
+    </view>
+ </view>
+ <view class="fg">
+   <view class="h-line-left"></view>
+   <text class="fg-text">介绍</text>
+   <view class="h-line-right"></view>
+ </view>
+ <view class="pro-intro">
+  <text>{{product[0].productIntro}}</text>
+ </view>
+ <view class="fg">
+   <view class="h-line-left"></view>
+   <text class="fg-text">计划书</text>
+   <view class="h-line-right"></view>
+ </view>
+ <view class="pro-plan">
+   <view>
+     <van-cell title="项目计划书" is-link value="点击下载" data-url="{{product[0].planUrl}}" bind:click="downLoad"/> 
+   </view>
+   <view>
+     <van-cell title="股权众筹计划书" is-link value="点击下载" data-url="{{product[0].gqUrl}}" bind:click="downLoad"/>
+   </view>
+   <view style="width:100%;height:30rpx;background-color:white">
+     <van-progress color="#ee0a24" percentage="{{progress}}" />
+   </view>
+ </view>
+ <view class="fg">
+   <view class="h-line-left"></view>
+   <text class="fg-text">图片详情</text>
+   <view class="h-line-right"></view>
+ </view>
+  <view class="pro-img">
+    <view wx:for="{{product[0].imgList}}" wx:key="index" class="image">
+    <image src="{{item}}"></image>
+  </view>
+  </view>
+  <van-submit-bar
+  price="{{product[0].productPrice*needNum*100}}"
+  button-text="确定投资"
+  bindtap="onSubmit"
+ />
+</view>

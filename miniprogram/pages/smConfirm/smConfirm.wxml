@@ -1,0 +1,30 @@
+<!--miniprogram/pages/smConfirm/smConfirm.wxml-->
+<view wx:if="{{show}}">
+    <van-cell title="上传身份证国徽面照片" is-link bindtap="upLoadZImg" />
+    <van-progress  color="#ee0a24" percentage="{{zProgress}}" />
+    <view class="up-img">
+      <view class="img-item">
+        <image src="{{zImg}}" ></image>
+        <view class="delete-icon">
+          <van-icon name="cross" size="24" color="red" bindtap="deleteZImg" />
+        </view>
+      </view>
+    </view>
+    <van-cell title="上传身份证国照片面照片" is-link bindtap="upLoadFImg" />
+    <van-progress  color="#ee0a24" percentage="{{fProgress}}" />
+    <view class="up-img">
+      <view class="img-item">
+        <image src="{{fImg}}" ></image>
+        <view class="delete-icon">
+          <van-icon name="cross" size="24" color="red" data-item="{{fImg}}" bindtap="deleteFImg" />
+        </view>
+      </view>
+    </view>
+    <van-button type="primary" color="red" block bindtap="smConfirm">实名认证</van-button>
+</view>
+<view wx:else>
+  <view>
+    <text>请您耐心等待几分钟，我们正在处理您的实名认证</text>
+  </view>
+  <van-button type="primary" color="red" block bindtap="backIndex">返回首页</van-button>
+</view>

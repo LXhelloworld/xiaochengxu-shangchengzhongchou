@@ -1,0 +1,63 @@
+/* miniprogram/pages/payment/payment.wxss */
+.contain{
+  width: 100%;
+  padding-bottom: 20rpx;
+  background-color: rgb(236, 236, 236);
+}
+.pro-card{
+  background-color: white;
+  padding-bottom: 100rpx;
+}
+.van-card{
+  background-color: white !important;
+  border-radius: 22rpx !important;
+}
+.pay-btn{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.total{
+  border-bottom: 0.5rpx rgb(235, 235, 235) solid;
+}
+
+.totalPrice{
+  float: right;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+.t-1{
+  color: rgb(53, 53, 53);
+  font-size: 30rpx;
+}
+.t-2{
+  color: rgb(255, 19, 19);
+  font-size: 25rpx;
+}
+.t-3{
+  color: rgb(255, 19, 19);
+  font-size: 30rpx;
+}
+.fg{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15rpx;
+  margin-top: 15rpx;
+}
+.h-line-left{
+  height: 2rpx;
+  width: 220rpx;
+  background-image: linear-gradient(to right ,rgba(255, 255, 255, 0),rgb(116, 116, 116));
+}
+.h-line-right{
+  height: 2rpx;
+  width: 220rpx;
+  background-image: linear-gradient(to left ,rgba(255, 255, 255, 0),rgb(116, 116, 116));
+}
+.fg-text{
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}

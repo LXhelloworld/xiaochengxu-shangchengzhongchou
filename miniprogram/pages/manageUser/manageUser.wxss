@@ -1,0 +1,13 @@
+/* miniprogram/pages/manageUser/manageUser.wxss */
+.contain{
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+.van-card{
+  background-color: white !important;
+  margin: 15rpx !important;
+  border-radius: 22rpx;  
+}

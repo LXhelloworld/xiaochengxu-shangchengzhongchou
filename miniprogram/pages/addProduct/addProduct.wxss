@@ -1,0 +1,50 @@
+/* miniprogram/pages/editProduct/editProduct.wxss */
+/* miniprogram/pages/addProduct/addProduct.wxss */
+.contain{
+  width: 100%;
+  padding-bottom:44px;
+}
+.sc-button{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.up-img{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.img-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 15px;
+  width: 120rpx;
+  height:120rpx;
+  margin: 15rpx;
+}
+.img-item image{
+  width: 80%;
+  height: 100%;
+  border-radius: 11rpx;
+}
+.video{
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.plan-text{
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plan-text text{
+  font-size: 25rpx;
+  margin-left: 20rpx;
+}
+.plan-text view{
+  font-size: 25rpx;
+  margin-right: 10rpx;
+}

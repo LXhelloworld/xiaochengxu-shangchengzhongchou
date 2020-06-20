@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addProduct/addProduct",
+    "pages/product/product",
+    "pages/login/login",
+    "pages/editProduct/editProduct",
+    "pages/user/user",
+    "pages/manageProduct/manageProduct",
+    "pages/payment/payment",
+    "pages/manageCompany/manageCompany",
+    "pages/manageUser/manageUser",
+    "pages/companyIntro/companyIntro",
+    "pages/smConfirm/smConfirm",
+    "pages/orderList/orderList",
+    "pages/connection/connection"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "xx公司",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/home1.png",
+        "selectedIconPath": "./images/home.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户主页",
+        "iconPath": "./images/user.png",
+        "selectedIconPath": "./images/user1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

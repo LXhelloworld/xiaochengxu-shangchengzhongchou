@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-progress": "@vant/weapp/progress/index"
+  },
+  "backgroundColor": "#F6F6F6",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FF0000",
+  "navigationBarTitleText": "编辑项目",
+  "navigationBarTextStyle": "white"
+}
