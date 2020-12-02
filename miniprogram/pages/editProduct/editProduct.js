@@ -228,10 +228,10 @@ Page({
     db.collection('products').doc(options.id).get().then((res)=>{
       this.setData({
         productName:res.data.productName,
-        productPrice:res.data.productPrice,
+        productPrice:Number(res.data.productPrice),
         productIntro:res.data.productIntro,
-        totalNum:res.data.totalNum,
-        num:res.data.num,
+        totalNum:Number(res.data.totalNum),
+        num:Number(res.data.num),
         startTime:res.data.startTime,
         endTime:res.data.endTime,
         imgList:res.data.imgList,

@@ -1,4 +1,5 @@
 // miniprogram/pages/product/product.js
+import Toast  from '../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
   /**
@@ -16,14 +17,29 @@ Page({
     db.collection('products').where({
       productName:options.productName
     }).get().then((res)=>{
-      
       this.setData({
         product:res.data
       })
-      console.log(this.data.product)
+      this.ProductProgress();
     })
   },
-
+  //获取众筹进度
+  ProductProgress(){
+    const db = wx.cloud.database();
+    db.collection('userProduct').where({
+      productId:this.data.product._id,
+      paid:true
+    }).get().then((res)=>{
+      var nowNum = 0;
+      res.data.forEach((item)=>{
+        nowNum += item.needNum
+      })
+      this.setData({
+        proProgress:(nowNum/this.data.product[0].totalNum*100).toFixed(2),
+        nowNum:nowNum
+      })
+    })
+  },
   addNum(){
     if(this.data.needNum<this.data.product[0].num){
       this.data.needNum +=1
@@ -66,21 +82,39 @@ Page({
     var id = wx.getStorageSync('id')
     if(id){
       const db = wx.cloud.database();
-      db.collection('userProduct').add({
-        data:{
-          userId:id,
-          productId:this.data.product[0]._id,
-          productName:this.data.product[0].productName,
-          productImg:this.data.product[0].imgList[0],
-          productPrice:this.data.product[0].productPrice,
-          productIntro:this.data.product[0].productIntro,
-          needNum:this.data.needNum,
-          paid:false
-        }
-      }).then((res)=>{
-        wx.navigateTo({
-          url: './../payment/payment?id='+res._id,
+      db.collection('userProduct').where({
+        userId:id,
+        paid:true
+      }).get().then((res1)=>{
+        var userNum = 0
+        res1.data.forEach((item)=>{
+          userNum +=item.needNum
         })
+        if(userNum+this.data.needNum <= this.data.product[0].num){
+          if(this.data.nowNum+this.data.needNum <= this.data.product[0].totalNum){
+            const db = wx.cloud.database();
+            db.collection('userProduct').add({
+              data:{
+                userId:id,
+                productId:this.data.product[0]._id,
+                productName:this.data.product[0].productName,
+                productImg:this.data.product[0].imgList[0],
+                productPrice:this.data.product[0].productPrice,
+                productIntro:this.data.product[0].productIntro,
+                needNum:this.data.needNum,
+                paid:false
+              }
+            }).then((res)=>{
+              wx.navigateTo({
+                url: './../payment/payment?id='+res._id,
+              })
+            })
+          }else{
+            Toast('超过库存！请减少预购数量')
+          }
+        }else{
+          Toast('超过限购数量！请减少预购数量或选择其他项目')
+        }
       })
     }else{
       wx.navigateTo({

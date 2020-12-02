@@ -12,6 +12,7 @@
   <van-cell-group>
   <van-field
     label="总股数"
+    type="digit"
     value="{{ totalNum }}"
     border="{{ false }}"
     bind:blur="onChangeTotal"
@@ -20,6 +21,7 @@
   <van-cell-group>
   <van-field
     label="每人限购"
+    type="digit"
     value="{{ num }}"
     border="{{ false }}"
     bind:blur="onChangeOnePeople"
@@ -28,6 +30,7 @@
   <van-cell-group>
   <van-field
     label="单股价格"
+    type="number"
     value="{{ productPrice }}"
     border="{{ false }}"
     bind:blur="onChangeOne"
@@ -68,7 +71,7 @@
     </view>
   </view>
    <view>
-    <van-cell title="股权众筹计划" is-link bindtap="upLoadgqFile" />
+    <van-cell title="项目执行计划" is-link bindtap="upLoadgqFile" />
     <van-progress  color="#ee0a24" percentage="{{gqProgress}}" />
     <view wx:if="{{gqUrl}}" class="plan-text">
       <text>{{productName}}股权众筹计划</text>

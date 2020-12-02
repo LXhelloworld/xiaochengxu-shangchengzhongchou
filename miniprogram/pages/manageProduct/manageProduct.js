@@ -65,6 +65,19 @@ Page({
       this.onLoadData();
     })
   },
+  onSearch(e){
+    const db = wx.cloud.database();
+    db.collection('products').where({
+      productName:{
+        $regex:'.*'+e.detail,
+        $options:'i'
+      }
+    }).get().then((res)=>{
+      this.setData({
+        productsList:res.data
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

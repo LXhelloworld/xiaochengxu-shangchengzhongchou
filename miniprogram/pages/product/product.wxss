@@ -98,3 +98,14 @@
   width: 100%;
   margin:20rpx
 }
+.progress{
+  width:100%;
+  height:30rpx;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+}
+.progress van-progress{
+  width: 90% !important;
+  margin-left: 15rpx !important;
+}

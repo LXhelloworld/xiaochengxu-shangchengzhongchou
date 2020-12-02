@@ -14,23 +14,41 @@ Page({
    */
   onLoad: function (options) {
     const db = wx.cloud.database();
+    //获取公告信息
     db.collection('company').get().then((res)=>{
         this.setData({
           gonggao:res.data[0].gonggao
         })
       
     })
+    //获取项目列表
     db.collection('products').get().then((res)=>{
       this.setData({
         productsList:res.data
       })
     })
   },
-
+  /**
+   * 跳转到项目详情页面
+   */
   jumpProduct(e){
     console.log(e);
     wx.navigateTo({
       url: '../product/product?productName='+e.currentTarget.dataset.productname,
+    })
+  },
+  //关键词搜索
+  onSearch(e){
+    const db = wx.cloud.database();
+    db.collection('products').where({
+      productName:{  //关键词模糊搜索
+        $regex:'.*'+e.detail,  
+        $options:'i'
+      }
+    }).get().then((res)=>{
+      this.setData({
+        productsList:res.data
+      })
     })
   },
 

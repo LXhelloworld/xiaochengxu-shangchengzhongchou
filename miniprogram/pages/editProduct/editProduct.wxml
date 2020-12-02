@@ -1,5 +1,4 @@
 <!--miniprogram/pages/editProduct/editProduct.wxml-->
-<!--miniprogram/pages/addProduct/addProduct.wxml-->
 <view class="contain">
   <van-cell-group>
   <van-field
@@ -68,7 +67,7 @@
     </view>
   </view>
    <view>
-    <van-cell title="股权众筹计划" is-link bindtap="upLoadgqFile" />
+    <van-cell title="项目执行计划" is-link bindtap="upLoadgqFile" />
     <van-progress  color="#ee0a24" percentage="{{gqProgress}}" />
     <view wx:if="{{gqUrl}}" class="plan-text">
       <text>{{productName}}股权众筹计划</text>

@@ -31,6 +31,11 @@ Page({
             })
           }
         
+      }).catch(()=>{
+        wx.setStorage({
+          data: '',
+          key: 'id',
+        })
       })
       }
     })
@@ -46,9 +51,16 @@ Page({
 
 
   call:function(){
-    wx.makePhoneCall({
-      phoneNumber: '13348680343',
+    wx.cloud.callFunction({
+      name:'sendMessage',
+      success:function(res) {
+        console.log('result:',res.result)
+      },
+      fail:console.error
     })
+    /* wx.makePhoneCall({
+      phoneNumber: '13348680343',
+    }) */
   },
   login(){
     var id = wx.getStorageSync('id')
@@ -103,6 +115,11 @@ Page({
             })
           }
         
+      }).catch(()=>{
+        wx.setStorage({
+          data: '',
+          key: 'id',
+        })
       })
       }
     })

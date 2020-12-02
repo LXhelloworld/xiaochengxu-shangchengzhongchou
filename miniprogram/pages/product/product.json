@@ -6,7 +6,8 @@
     "van-submit-bar": "@vant/weapp/submit-bar/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-progress": "@vant/weapp/progress/index"
+    "van-progress": "@vant/weapp/progress/index",
+    "van-toast": "@vant/weapp/toast/index"
   },
   "backgroundColor": "#F6F6F6",
   "backgroundTextStyle": "light",

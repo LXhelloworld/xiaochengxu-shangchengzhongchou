@@ -18,3 +18,9 @@
   height: 100%;
   border-radius: 11rpx;
 }
+.success{
+  display: flex;
+  justify-content: center;
+  padding-top: 100rpx;
+  padding-bottom: 100rpx;
+}

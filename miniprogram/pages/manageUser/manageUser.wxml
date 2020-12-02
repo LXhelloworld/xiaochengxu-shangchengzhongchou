@@ -1,5 +1,10 @@
 <!--miniprogram/pages/manageUser/manageUser.wxml-->
 <view class="contain">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入用户名称关键词"
+    bind:search="onSearch"
+  />
  <view wx:for="{{userList}}" wx:key="index">
   <van-card
   tag="{{item.shenfen}}"

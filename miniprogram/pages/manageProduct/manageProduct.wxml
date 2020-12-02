@@ -1,5 +1,10 @@
 <!--miniprogram/pages/manageProduct/manageProduct.wxml-->
 <view class="contain">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入项目名称关键词"
+    bind:search="onSearch"
+  />
  <view wx:for="{{productsList}}" wx:key="index">
   <van-card
   num="1"

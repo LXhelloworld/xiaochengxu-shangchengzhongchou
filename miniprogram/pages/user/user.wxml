@@ -38,13 +38,6 @@
 				<van-icon name="arrow" color="red" />
 			</view>
 		</view>
-		<view class="item">
-			<view class="line"></view>
-			<text>批评建议</text>
-			<view class="icon1">
-				<van-icon name="arrow" color="red" />
-			</view>
-		</view>
 	</view>
 	<view class="kf">
 		<button bindtap="call">客服小姐姐</button>

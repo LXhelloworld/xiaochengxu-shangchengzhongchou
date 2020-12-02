@@ -4,6 +4,11 @@
   text="{{gonggao}}"
   >
   </van-notice-bar>
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入项目名称关键词"
+    bind:search="onSearch"
+  />
   <view class="pro-list">
     <view wx:for="{{productsList}}" wx:key="index" class="pro-item">
       <image src="{{item.imgList[0]}}"></image>

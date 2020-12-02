@@ -82,7 +82,8 @@ Page({
     const db = wx.cloud.database();
     db.collection('userProduct').doc(options.id).get().then((res)=>{
       this.setData({
-        userProduct:res.data
+        userProduct:res.data,
+        totalPrice:(res.data.productPrice*res.data.needNum).toFixed(2)
       })
     })
   },

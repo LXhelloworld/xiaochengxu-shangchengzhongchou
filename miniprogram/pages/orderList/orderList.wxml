@@ -9,7 +9,7 @@
   thumb="{{item.productImg}}"
   >
   <view slot="footer">
-    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="editProduct" wx:if="{{item.paid}}">评论</van-button>
+    <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="editProduct" wx:if="{{item.paid}}">感谢您的参与</van-button>
     <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="toPay" wx:else>去支付</van-button>
     <van-button round color="red" size="mini" data-id="{{item._id}}" bindtap="showDialog">删除</van-button>
   </view>

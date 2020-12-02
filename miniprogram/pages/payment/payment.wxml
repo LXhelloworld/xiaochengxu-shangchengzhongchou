@@ -12,7 +12,7 @@
       <view class="totalPrice">
         <text class="t-1">合计：</text>
         <text class="t-2">￥</text>
-        <text class="t-3">{{userProduct.productPrice*userProduct.needNum}}</text>
+        <text class="t-3">{{totalPrice}}</text>
       </view>
     </view>
   </view>
@@ -57,8 +57,8 @@
   <van-toast id="van-toast" />
 </view>
 <view wx:else>
-  <view>
-    <text>非常感谢您的投资</text>
+  <view class="success">
+    <text>非常感谢您的投资！</text>
   </view>
    <van-button type="primary" color="red" block bindtap="backIndex">返回首页</van-button>
 </view>

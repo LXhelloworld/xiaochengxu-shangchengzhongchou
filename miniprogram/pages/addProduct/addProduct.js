@@ -11,9 +11,6 @@ Page({
     endTime:'',
     videoUrl:'',
     productName:'',
-    productPrice:0,
-    totalNum:0,
-    num:0,
     productIntro:'',
     currentDate: new Date().getTime(),
     minDate: new Date(2019,1,1).getTime(),
@@ -182,10 +179,10 @@ Page({
         db.collection('products').add({
           data:{
             productName:this.data.productName,
-            productPrice:this.data.productPrice,
+            productPrice:Number(this.data.productPrice),
             productIntro:this.data.productIntro,
-            totalNum:this.data.totalNum,
-            num:this.data.num,
+            totalNum:Number(this.data.totalNum),
+            num:Number(this.data.num),
             startTime:this.data.startTime,
             endTime:this.data.endTime,
             imgList:this.data.imgList,

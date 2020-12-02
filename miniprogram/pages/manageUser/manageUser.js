@@ -72,7 +72,19 @@ Page({
       }
     })
   },
-
+  onSearch(e){
+    const db = wx.cloud.database();
+    db.collection('users').where({
+      nickName:{
+        $regex:'.*'+e.detail,
+        $options:'i'
+      }
+    }).get().then((res)=>{
+      this.setData({
+        userList:res.data
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
